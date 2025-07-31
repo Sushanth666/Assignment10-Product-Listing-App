@@ -41,7 +41,7 @@ export const products = [
   },
   {
     id: 6,
-    name: 'BoAt Bassheads 100',
+    name: 'Boat Bassheads 100',
     price: 500,
     category: 'Headphones',
     rating: 4.1,
