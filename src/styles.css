@@ -1,0 +1,154 @@
+/* Global background and typography */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Center container and limit width */
+.container-fluid {
+  max-width: 1200px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+  font-weight: 700;
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff; /* Bootstrap primary */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Controls container */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Forms: Search, filter dropdowns */
+input.form-control,
+select.form-control {
+  border-radius: 25px;
+  border: 1.5px solid #007bff;
+  padding: 10px 20px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  background: #222;
+  color: #eee;
+}
+
+input.form-control::placeholder {
+  color: #aaa;
+}
+
+input.form-control:focus,
+select.form-control:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0,123,255,0.7);
+  outline: none;
+  background: #111;
+  color: #f0f0f0;
+}
+
+/* Product Card */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #222;
+  color: #f0f0f0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 123, 255, 0.35);
+}
+
+/* Product Image */
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 180px;
+  object-fit: contain;
+  background-color: #111;
+  padding: 15px;
+}
+
+/* Card content text */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #03a9f4; /* Soft blue */
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #e41313;
+}
+
+.card-text span {
+  color: #ffc107; /* Gold yellow for stars */
+  font-weight: bold;
+}
+
+/* No products message */
+.no-products {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 40px 0;
+  color: #999;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  input.form-control,
+  select.form-control {
+    width: 100% !important;
+  }
+
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+.electronics-double-color {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  color: #007bff; /* Primary base color (blue) */
+  position: relative;
+  
+  /* Multiple shadows give a layered, glowing double color effect */
+  text-shadow: 
+    3px 3px 0 #00d4ff,   /* Light blue shadow shifted down-right */
+    -3px -3px 0 #0047b3; /* Darker blue shadow shifted up-left */
+  
+  /* Optional: smooth transition on hover */
+  transition: color 0.3s ease;
+}
+
+.electronics-double-color:hover {
+  color: #00d4ff;
+  text-shadow:
+    4px 4px 6px #0047b3,
+    -4px -4px 6px #007bff;
+}
+
